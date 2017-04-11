@@ -1,4 +1,11 @@
-# Behavioral-Cloning Project3
+# Behavioral-Cloning P3
+## Description
+In this project, collecting data of driving in a simulator then feeding the data (camera view and steering) into a neural network to clone behaivor of the driver. Camera view includes center, left, and right images with only one steering data then steering is adjusted depending on the which left or right view. 
+
+To avoid overfitting and removing unrelated information, images goes through preprocessing stages.
+
+As a convulution network model, the model described in [NVDIA](https://devblogs.nvidia.com/parallelforall/deep-learning-self-driving-cars/) paper is used. 
+
 
 ## NVDIA Model 
 
