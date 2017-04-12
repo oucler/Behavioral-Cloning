@@ -6,11 +6,12 @@ To avoid overfitting and removing unrelated information, images goes through pre
 
 As a convulution network model, the model described in [NVDIA](https://devblogs.nvidia.com/parallelforall/deep-learning-self-driving-cars/) paper is used. 
 
-1. Submission includes all required files and can be used to run the simulator in autonomous mode
+1. **Submission includes all required files and can be used to run the simulator in autonomous mode**
 Two new files are generated model.py and helper.py. In model.py file model architecture is defined and trainig is also done in model.py. Images need to be augmented to avoid overfitting. 
 
-* model-000.h5 is created if the model is better than previous one
-*
+* model.py generates model-000.h5 file if the model' accuracy is better than previous one
+* helper.py is used for image processing and feeding the data into model.fit_generator
+* python drive.py model-000.5 track1 (track1.mp4 video created)
 
 ## Neural Network Model Specificatios 
 The model table shown below is based on [NVDIA](https://devblogs.nvidia.com/parallelforall/deep-learning-self-driving-cars/) and some modification made to the model -- images contain information and to avoid overfitting 50% of data is dropped. 
