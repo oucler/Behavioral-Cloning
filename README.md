@@ -7,36 +7,8 @@ To avoid overfitting and removing unrelated information, images goes through pre
 As a convulution network model, the model described in [NVDIA](https://devblogs.nvidia.com/parallelforall/deep-learning-self-driving-cars/) paper is used. 
 
 
-
-=================================================================
-lambda_1 (Lambda)            (None, 160, 320, 3)       0         
-_________________________________________________________________
-cropping2d_1 (Cropping2D)    (None, 90, 320, 3)        0         
-_________________________________________________________________
-conv2d_1 (Conv2D)            (None, 43, 158, 24)       1824      
-_________________________________________________________________
-conv2d_2 (Conv2D)            (None, 20, 77, 36)        21636     
-_________________________________________________________________
-conv2d_3 (Conv2D)            (None, 8, 37, 48)         43248     
-_________________________________________________________________
-conv2d_4 (Conv2D)            (None, 6, 35, 64)         27712     
-_________________________________________________________________
-conv2d_5 (Conv2D)            (None, 4, 33, 64)         36928     
-_________________________________________________________________
-dropout_1 (Dropout)          (None, 4, 33, 64)         0         
-_________________________________________________________________
-flatten_1 (Flatten)          (None, 8448)              0         
-_________________________________________________________________
-dense_1 (Dense)              (None, 100)               844900    
-_________________________________________________________________
-dense_2 (Dense)              (None, 50)                5050      
-_________________________________________________________________
-dense_3 (Dense)              (None, 10)                510       
-_________________________________________________________________
-dense_4 (Dense)              (None, 1)                 11        
-=================================================================
-
-## NVDIA Model 
+## Neural Network Model Specificatios 
+The model table shown below is based on [NVDIA](https://devblogs.nvidia.com/parallelforall/deep-learning-self-driving-cars/) and some modification made to the model -- images contain information and to avoid overfitting 50% of data is dropped. 
 
 | Layer(type)          | Output Shape    | Param#  |
 | ---------------------|:---------------:| -------:|
@@ -49,3 +21,7 @@ dense_4 (Dense)              (None, 1)                 11
 | Conv2d_5(Conv2D)     | None,2,33,64    |  36928  |
 | Dropout_1(Dropout)   | None,2,33,64    |    0    |
 | Flatten_1(Flatten)   | None,4224       |    0    |
+| Dense_1(Dense)       | None,100        |  844900 |
+| Dense_2(Dense)       | None,50         |   5050  |
+| Dense_3(Dense)       | None,10         |    510  |
+| Dense_4(Dense)       | None,1          |    11   |
