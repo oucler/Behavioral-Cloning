@@ -30,8 +30,7 @@ Two new files are generated model.py and helper.py. In model.py file model archi
 ## Model Architecture and Training Strategy:
 ### 1. **An appropriate model architecture has been employed**:
 
-## Neural Network Model Specificatios 
-The model table shown below is based on [NVDIA](https://devblogs.nvidia.com/parallelforall/deep-learning-self-driving-cars/) and some modification made to the model -- images contain information and to avoid overfitting 50% of data is dropped. 
+* The model table shown below is based on [NVDIA](https://devblogs.nvidia.com/parallelforall/deep-learning-self-driving-cars/) and some modification made to the model -- images contain irrelevant information such as sky and trees also to avoid overfitting 50% of data is dropped. 
 
 | Layer(type)          | Output Shape    | Param#  |
 | ---------------------|:---------------:| -------:|
@@ -48,3 +47,7 @@ The model table shown below is based on [NVDIA](https://devblogs.nvidia.com/para
 | Dense_2(Dense)       | None,50         |   5050  |
 | Dense_3(Dense)       | None,10         |    510  |
 | Dense_4(Dense)       | None,1          |    11   |
+
+### 2. **Attempts to reduce overfitting in the model**:
+
+* Right after convolutional layer 5 ends and before connected to fully neural network (Flatten_1), 50% of data is dropped for reducing overfitting. 
