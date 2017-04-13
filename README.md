@@ -6,15 +6,27 @@ To avoid overfitting and removing unrelated information, images goes through pre
 
 As a convulution network model, the model described in [NVDIA](https://devblogs.nvidia.com/parallelforall/deep-learning-self-driving-cars/) paper is used. 
 
-1. **Submission includes all required files and can be used to run the simulator in autonomous mode**: 1
+1. **Submission includes all required files and can be used to run the simulator in autonomous mode**: 
 Two new files are generated model.py and helper.py. In model.py file model architecture is defined and trainig is also done in model.py. Images need to be augmented to avoid overfitting. 
 
-* model.py generates model-000.h5 file if the model' accuracy is better than previous one 1a
-* helper.py is used for image processing and feeding the data into model.fit_generator() 1b
+* model.py generates model-000.h5 file if the model' accuracy is better than previous one 
+* helper.py is used for image processing and feeding the data into model.fit_generator() 
 * README.md for details of the project 1c
 * driver.py file is used to validate the model 1d
-2. **Submission includes functional code Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing**
+
+2. **Submission includes functional code Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing**:
+
 * python drive.py model-000.5 track1 (track1.mp4 video created)
+* [track1.mp4](youtube.com)
+
+3. **Submission code is usable and readable**:
+
+* Two python codes are submitted: helper.py and model.py
+* helper.py has two classes: image_processing and generator, inherits from image_processing class
+* model.py contains two classes: build_model(), inherits from generator class, and train_model(), inherits from build_model
+* model.py has main() funtion includes parser command line options 
+
+
 ## Neural Network Model Specificatios 
 The model table shown below is based on [NVDIA](https://devblogs.nvidia.com/parallelforall/deep-learning-self-driving-cars/) and some modification made to the model -- images contain information and to avoid overfitting 50% of data is dropped. 
 
