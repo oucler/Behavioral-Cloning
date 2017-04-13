@@ -32,9 +32,9 @@ Two new files are generated model.py and helper.py. In model.py file model archi
 
 * The model table shown below is based on [NVDIA](https://devblogs.nvidia.com/parallelforall/deep-learning-self-driving-cars/) and some modification made to the model -- images contain irrelevant information such as sky and trees also to avoid overfitting 50% of data is dropped. 
 
-| Layer(type)          | Output Shape    | Param#  |
-| ---------------------|:---------------:| -------:|
-| Lambda               | None,75,320,3   |    0    |
+### | Layer(type)          | Output Shape    | Param#  |
+### | ---------------------|:---------------:| -------:|
+### | Lambda               | None,75,320,3   |    0    |
 | Cropping(Cropping2D) | None,90,320,3   |    0    |
 | Conv2d_1(Conv2D)     | None,36,158,24  |   1824  |
 | Conv2d_2(Conv2D)     | None,16,77,36   |  21636  |
@@ -51,3 +51,9 @@ Two new files are generated model.py and helper.py. In model.py file model archi
 ### 2. **Attempts to reduce overfitting in the model**:
 
 * Right after convolutional layer 5 ends and before connected to fully neural network (Flatten_1), 50% of data is dropped for reducing overfitting. 
+
+## 3. **Model parameter tuning**:
+
+* Learning Rate for Adam Optimizer = 1e-4 (tuned between 1e-3 and 1e-4)
+* Epoch = 20 (tuned between 5 and 20) and 20 has the lower loss
+* Steps per epoch = 2000 (exprimented with range from 100 to 2000)
