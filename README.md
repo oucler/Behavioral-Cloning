@@ -17,8 +17,8 @@ Two new files are generated model.py and helper.py. In model.py file model archi
 
 ### 2. **Submission includes functional code Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing**:
 
-* python drive.py model-000.5 track1 (track1.mp4 video created)
-* [track1.mp4](youtube.com)
+* python drive.py model-000.5 laketrack (laketrack.mp4 video created)
+* [laketrack.mp4](youtube.com)
 
 ### 3. **Submission code is usable and readable**:
 
@@ -65,5 +65,6 @@ Two new files are generated model.py and helper.py. In model.py file model archi
 
 * To collect the data in simulator, I drove the car twice clockwise and counter clockwise and stayed in the middle of the road also to gather data in case of getting of the track I drove at the edge then steered to the middle of the road.
 
-
+## References: 
+1. NVDIA Model: https://devblogs.nvidia.com/parallelforall/deep-learning-self-driving
 
