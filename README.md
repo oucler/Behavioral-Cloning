@@ -6,6 +6,7 @@ To avoid overfitting and removing unrelated information, images goes through pre
 
 As a convulution network model, the model described in [NVDIA](https://devblogs.nvidia.com/parallelforall/deep-learning-self-driving-cars/) paper is used. 
 
+## Files Submitted & Code Quality
 ### 1. **Submission includes all required files and can be used to run the simulator in autonomous mode**: 
 Two new files are generated model.py and helper.py. In model.py file model architecture is defined and trainig is also done in model.py. Images need to be augmented to avoid overfitting. 
 
