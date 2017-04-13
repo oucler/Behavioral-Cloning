@@ -32,21 +32,21 @@ Two new files are generated model.py and helper.py. In model.py file model archi
 
 * The model table shown below is based on [NVDIA](https://devblogs.nvidia.com/parallelforall/deep-learning-self-driving-cars/) and some modification made to the model -- images contain irrelevant information such as sky and trees also to avoid overfitting 50% of data is dropped. 
 
-### | Layer(type)          | Output Shape    | Param#  |
-### | ---------------------|:---------------:| -------:|
-### | Lambda               | None,75,320,3   |    0    |
-| Cropping(Cropping2D) | None,90,320,3   |    0    |
-| Conv2d_1(Conv2D)     | None,36,158,24  |   1824  |
-| Conv2d_2(Conv2D)     | None,16,77,36   |  21636  |
-| Conv2d_3(Conv2D)     | None,6,37,48    |  43248  |
-| Conv2d_4(Conv2D)     | None,4,35,64    |  27712  |
-| Conv2d_5(Conv2D)     | None,2,33,64    |  36928  |
-| Dropout_1(Dropout)   | None,2,33,64    |    0    |
-| Flatten_1(Flatten)   | None,4224       |    0    |
-| Dense_1(Dense)       | None,100        |  844900 |
-| Dense_2(Dense)       | None,50         |   5050  |
-| Dense_3(Dense)       | None,10         |    510  |
-| Dense_4(Dense)       | None,1          |    11   |
+  | Layer(type)          | Output Shape    | Param#  |
+  | ---------------------|:---------------:| -------:|
+  | Lambda               | None,75,320,3   |    0    |
+  | Cropping(Cropping2D) | None,90,320,3   |    0    |
+  | Conv2d_1(Conv2D)     | None,36,158,24  |   1824  |
+  | Conv2d_2(Conv2D)     | None,16,77,36   |  21636  |
+  | Conv2d_3(Conv2D)     | None,6,37,48    |  43248  |
+  | Conv2d_4(Conv2D)     | None,4,35,64    |  27712  |
+  | Conv2d_5(Conv2D)     | None,2,33,64    |  36928  |
+  | Dropout_1(Dropout)   | None,2,33,64    |    0    |
+  | Flatten_1(Flatten)   | None,4224       |    0    |
+  | Dense_1(Dense)       | None,100        |  844900 |
+  | Dense_2(Dense)       | None,50         |   5050  |
+  | Dense_3(Dense)       | None,10         |    510  |
+  | Dense_4(Dense)       | None,1          |    11   |
 
 ### 2. **Attempts to reduce overfitting in the model**:
 
