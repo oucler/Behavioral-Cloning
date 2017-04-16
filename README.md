@@ -69,9 +69,17 @@ Two new files are generated model.py and helper.py. In model.py file model archi
 
 * There are three camera views: center, right, and left view. Since some of the information is irrelevant images cropped from top and bottom. 
 
-*Center Image*
+**Center Image**
 
 ![[Center Image]](images/center.png)
+
+**Left Image**
+
+![[Left Image]](images/left.png)
+
+**Right Image**
+
+![[Left Image]](images/right.png)
 
 ## References: 
 1. NVDIA Model: https://devblogs.nvidia.com/parallelforall/deep-learning-self-driving
