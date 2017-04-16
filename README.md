@@ -34,16 +34,15 @@ Two new files are generated model.py and helper.py. In model.py file model archi
 
   | Layer(type)          | Output Shape    | Param#  |
   | ---------------------|:---------------:| -------:|
-  | Lambda               | None,75,320,3   |    0    |
-  | Cropping(Cropping2D) | None,90,320,3   |    0    |
-  | Conv2d_1(Conv2D)     | None,36,158,24  |   1824  |
-  | Conv2d_2(Conv2D)     | None,16,77,36   |  21636  |
-  | Conv2d_3(Conv2D)     | None,6,37,48    |  43248  |
-  | Conv2d_4(Conv2D)     | None,4,35,64    |  27712  |
-  | Conv2d_5(Conv2D)     | None,2,33,64    |  36928  |
-  | Dropout_1(Dropout)   | None,2,33,64    |    0    |
-  | Flatten_1(Flatten)   | None,4224       |    0    |
-  | Dense_1(Dense)       | None,100        |  844900 |
+  | Lambda               | None,66,200,3   |    0    |
+  | Conv2d_1(Conv2D)     | None,31,98,24   |   1824  |
+  | Conv2d_2(Conv2D)     | None,14,47,36   |  21636  |
+  | Conv2d_3(Conv2D)     | None,5,22,48    |  43248  |
+  | Conv2d_4(Conv2D)     | None,3,20,64    |  27712  |
+  | Conv2d_5(Conv2D)     | None,1,18,64    |  36928  |
+  | Dropout_1(Dropout)   | None,1,18,64    |    0    |
+  | Flatten_1(Flatten)   | None,1152       |    0    |
+  | Dense_1(Dense)       | None,100        |  115300 |
   | Dense_2(Dense)       | None,50         |   5050  |
   | Dense_3(Dense)       | None,10         |    510  |
   | Dense_4(Dense)       | None,1          |    11   |
@@ -51,13 +50,16 @@ Two new files are generated model.py and helper.py. In model.py file model archi
 ### 2. **Attempts to reduce overfitting in the model**:
 
 * Right after convolutional layer 5 ends and before connected to fully neural network (Flatten_1), 50% of data is dropped for reducing overfitting. 
+* 
 
 ## 3. **Model parameter tuning**:
 
   Time to traing the model and loss value are the two parameters took into consideration while tuning the model's parameters. 
   
-* Learning Rate for Adam Optimizer = 1e-5 (tuned between 1e-3 and 1e-5)
-* Epoch = 20 (tuned between 5 and 20) and 20 has the lower loss
+* Lambda normalization used for gradient decent to find global minima 
+* Non-linear function is used for activation (ELU) in the model.
+* Learning Rate for Adam Optimizer = 1e-5 (tuned between 1e-3 and 1e-4)
+* Epoch = 20 (tuned between 5 and 20) and 10 has the lower loss
 * Steps per epoch = 2000 (exprimented with range from 100 to 2000)
 * Batch Size = 40 (tuned by ranging from 30 to 128)
 
@@ -67,7 +69,16 @@ Two new files are generated model.py and helper.py. In model.py file model archi
 
 ## Image Processing:
 
-* There are three camera views: center, right, and left view. Since some of the information is irrelevant images cropped from top and bottom. 
+* Tried collecting data from simulator but model performed worse compared to provided [Udacity data](https://d17h27t6h515a5.cloudfront.net/topher/2016/December/584f6edd_data/data.zip)
+* There are three camera views: center, right, and left view. Since some of the information is irrelevant images cropped from top and bottom.
+* To avaoid overfitting and increase robustness some image processing techniques applied such as 
+  * Flipping images randomly 
+  * Randomly selecting images from right and left camera views
+  * Randomly adding brightness and darkness to the images
+  * Cropping sky and inside the car from the images
+  * Resizing images to the same size as [NVDIA model](https://devblogs.nvidia.com/parallelforall/deep-learning-self-driving-cars/)
+
+### Image Examples
 
   **Center Image**
 
