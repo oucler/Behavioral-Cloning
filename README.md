@@ -2,7 +2,7 @@
 
 ## LakeTrack
 
-![[Lake Track]](laketrack.mp4)
+[Lake Track](https://youtu.be/XBsT_MQjMGM)
 
 ## Description
 In this project, collecting data of driving in a simulator then feeding the data (camera view and steering) into a neural network to clone behaivor of the driver. Camera view includes center, left, and right images with only one steering data then steering is adjusted depending on the which left or right view. 
@@ -55,7 +55,7 @@ Two new files are generated model.py and helper.py. In model.py file model archi
 ### 2. **Attempts to reduce overfitting in the model**:
 
 * Right after convolutional layer 5 ends and before connected to fully neural network (Flatten_1), 50% of data is dropped for reducing overfitting. 
-* 
+
 
 ## 3. **Model parameter tuning**:
 
