@@ -10,7 +10,7 @@ As a convulution network model, the model described in [NVDIA](https://devblogs.
 ### 1. **Submission includes all required files and can be used to run the simulator in autonomous mode**: 
 Two new files are generated model.py and helper.py. In model.py file model architecture is defined and trainig is also done in model.py. Images need to be augmented to avoid overfitting. 
 
-* model.py generates model-000.h5 file if the model' accuracy is better than previous one 
+* model.py generates model.h5 file if the model' accuracy is better than previous one 
 * helper.py is used for image processing and feeding the data into model.fit_generator() 
 * README.md for details of the project 1c
 * driver.py file is used to validate the model 1d
