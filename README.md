@@ -106,5 +106,6 @@ Two new files are generated model.py and helper.py. In model.py file model archi
   ![[Left Image]](images/right.png)
 
 ## References: 
-1. NVDIA Model: https://devblogs.nvidia.com/parallelforall/deep-learning-self-driving
+1. NVDIA Model: https://devblogs.nvidia.com/parallelforall/deep-learning-self-
+2. https://github.com/naokishibuya/car-behavioral-cloning
 
