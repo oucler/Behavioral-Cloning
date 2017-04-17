@@ -63,8 +63,8 @@ Two new files are generated model.py and helper.py. In model.py file model archi
   
 * Lambda normalization used for gradient decent to find global minima 
 * Non-linear function is used for activation (ELU) in the model.
-* Learning Rate for Adam Optimizer = 1e-5 (tuned between 1e-3 and 1e-4)
-* Epoch = 20 (tuned between 5 and 20) and 10 has the lower loss
+* Learning Rate for Adam Optimizer = 1e-4 (tuned between 1e-3 and 1e-4)
+* Epoch = 10 (tuned between 5 and 20) and 10 has the lower loss
 * Steps per epoch = 2000 (exprimented with range from 100 to 2000)
 * Batch Size = 40 (tuned by ranging from 30 to 128)
 
