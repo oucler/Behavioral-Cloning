@@ -1,4 +1,9 @@
 # Behavioral-Cloning P3
+
+## LakeTrack
+
+![[Lake Track]](laketrack.mp4)
+
 ## Description
 In this project, collecting data of driving in a simulator then feeding the data (camera view and steering) into a neural network to clone behaivor of the driver. Camera view includes center, left, and right images with only one steering data then steering is adjusted depending on the which left or right view. 
 
@@ -17,8 +22,8 @@ Two new files are generated model.py and helper.py. In model.py file model archi
 
 ### 2. **Submission includes functional code Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing**:
 
-* python drive.py model-000.5 laketrack (laketrack.mp4 video created)
-* [laketrack.mp4](youtube.com)
+* python drive.py model.h5 laketrack 
+* python video.py laketrack (laketrack.mp4 video created)
 
 ### 3. **Submission code is usable and readable**:
 
